@@ -38,9 +38,7 @@ export default {
                         'ngrok-skip-browser-warning': 'any'
                     }
                 })
-                .then(res => {
-                    this.$parent.getCheburek()
-                })
+                .then(this.$parent.getCheburek())
                 .catch((error) => {
                     console.error(error)
                 })
