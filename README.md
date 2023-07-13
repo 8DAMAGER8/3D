@@ -7,6 +7,7 @@
 - `docker compose run php artisan migrate`
 
 ### Deployment front-end
+- `nvm install 18.16.1`
 - `npm i`
 - `npm run dev`
 
