@@ -117,6 +117,10 @@
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/voku/portable-ascii" />
       <excludeFolder url="file://$MODULE_DIR$/back/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/lcobucci/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/back/vendor/tymon/jwt-auth" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

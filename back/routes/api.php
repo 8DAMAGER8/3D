@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CheburekiController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
     Route::get('/get', [CheburekiController::class, 'getAll']);
-    Route::get('/get/{id}', [CheburekiController::class, 'getAll']);
+    Route::get('/get/{id}', [CheburekiController::class, 'getById']);
     Route::post('/create', [CheburekiController::class, 'create']);
     Route::post('/update/{id}', [CheburekiController::class, 'update']);
     Route::post('/delete/{id}', [CheburekiController::class, 'delete']);
+
+    Route::get('/get.user', [UserController::class, 'getAll']);
+    Route::get('/get.user/{id}', [UserController::class, 'getById']);
+    Route::post('/create.user', [UserController::class, 'create']);
+    Route::post('/update.user/{id}', [UserController::class, 'update']);
+    Route::post('/delete.user/{id}', [UserController::class, 'delete']);
+
 });
 

@@ -16,6 +16,12 @@ import { RouterLink, RouterView } from 'vue-router'
                     <li class="nav-item">
                         <RouterLink to="/profit" class="btn btn-outline-success me-2" >Польза чебуреков</RouterLink>
                     </li>
+                  <li class="nav-item">
+                    <RouterLink to="/create.user" class="btn btn-outline-success me-2" >Добавить пользователя</RouterLink>
+                  </li>
+                  <li class="nav-item">
+                    <RouterLink to="/users" class="btn btn-outline-success me-2" >Список пользователей</RouterLink>
+                  </li>
                 </ul>
                 <span class="navbar-text">
         Кушайте на здоровье
