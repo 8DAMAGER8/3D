@@ -46,7 +46,7 @@ export default {
     methods: {
         getCheburek() {
             axios.get(
-                BACKAND_URL + `/api/get`,
+                BACKAND_URL + `/auth/api/get`,
                 {
                     headers: {
                         'ngrok-skip-browser-warning': 'any'

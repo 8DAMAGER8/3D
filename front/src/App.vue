@@ -22,6 +22,9 @@ import { RouterLink, RouterView } from 'vue-router'
                   <li class="nav-item">
                     <RouterLink to="/users" class="btn btn-outline-success me-2" >Список пользователей</RouterLink>
                   </li>
+                  <li class="nav-item">
+                    <RouterLink to="/login" class="btn btn-outline-success me-2" >Вход</RouterLink>
+                  </li>
                 </ul>
                 <span class="navbar-text">
         Кушайте на здоровье
