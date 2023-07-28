@@ -18,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
 
+    Route::get('/get', [CheburekiController::class, 'getAll']);
+
     Route::get('/get/{id}', [CheburekiController::class, 'getById']);
     Route::post('/create', [CheburekiController::class, 'create']);
     Route::post('/update/{id}', [CheburekiController::class, 'update']);
@@ -37,7 +39,7 @@ Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
         Route::post('/me', [AuthController::class, 'me']);
 
         Route::group(['middleware' => 'auth:api'],function (){
-            Route::get('/get', [CheburekiController::class, 'getAll']);
+
         });
 
     });
