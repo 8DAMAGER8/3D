@@ -44,7 +44,7 @@ export default {
 
     methods: {
         createUser() {
-            axios.post(BACKAND_URL + `/api/create.user`, {
+            axios.post(BACKAND_URL + `/api/auth/create.user`, {
                     name: this.name,
                     email: this.email,
                     password: this.password,
