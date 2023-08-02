@@ -16,8 +16,8 @@ const router = createRouter({
             name: 'profit',
             component: () => import('../views/ProfitView.vue')
         },{
-            path: '/create.user',
-            name: 'create.user',
+            path: '/registration',
+            name: 'registration',
             component: () => import('../views/users/CreateView.vue')
         },{
             path: '/users',
@@ -45,7 +45,7 @@ router.beforeEach((to, from,next) => {
 
 
         if (!accessToken) {
-            if (to.name === 'login' || to.name === 'create.user') {
+            if (to.name === 'login' || to.name === 'registration') {
             return next()
         } else {
                 next({
@@ -54,7 +54,7 @@ router.beforeEach((to, from,next) => {
             }
     }
 
-    if (to.name === 'login' || to.name === 'create.user' && accessToken) {
+    if (to.name === 'login' || to.name === 'registration' && accessToken) {
             return next({
                 name: 'personal'
         })

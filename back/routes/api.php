@@ -33,7 +33,7 @@ Route::middleware([OwnCors::class])->group(function () {
 
 
     Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
-        Route::post('/create.user', [UserController::class, 'create']);
+        Route::post('/registration', [UserController::class, 'create']);
         Route::post('/login', [AuthController::class, 'login']);
         Route::post('/logout', [AuthController::class, 'logout']);
         Route::post('/refresh', [AuthController::class, 'refresh']);

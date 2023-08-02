@@ -6,7 +6,6 @@ use App\Models\User;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -45,21 +44,22 @@ class UserController extends Controller
                 'email' => 'required|email|max:250|unique:users',
                 'password' => 'required|min:8|confirmed'
             ]);
-            User::create([
+            $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
             ]);
 
-            Auth::user();
+//            Auth::user();
 
+            $token = \auth()->tokenById($user->id);
+
+            return response()->json(['access_token' => $token]);
 
         } catch (Exception $exception) {
 
             return response()->json($exception->getMessage(), 400);
         }
-
-        return response()->json();
     }
 
     public function delete($id): JsonResponse
