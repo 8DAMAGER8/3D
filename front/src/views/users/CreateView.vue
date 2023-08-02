@@ -57,7 +57,9 @@ export default {
                       'Content-Type': 'application/json',
                       'ngrok-skip-browser-warning': 'any'
                     }
-                }).then(this.$router.push('/users'))
+                }).then(res => console.log(res))
+
+                // }).then(this.$router.push('/users'))
                 .catch((error) => {
                     console.error(error)
                 })

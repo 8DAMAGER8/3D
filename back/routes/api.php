@@ -3,6 +3,7 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CheburekiController;
 use App\Http\Controllers\UserController;
+use App\Http\Middleware\OwnCors;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
+Route::middleware([OwnCors::class])->group(function () {
 
 
     Route::get('/get/{id}', [CheburekiController::class, 'getById']);
@@ -31,7 +32,7 @@ Route::middleware([\App\Http\Middleware\OwnCors::class])->group(function () {
     Route::post('/delete.user/{id}', [UserController::class, 'delete']);
 
 
-    Route::group(['middleware' => 'api', 'prefix' => 'auth'], function ($router) {
+    Route::group(['middleware' => 'api', 'prefix' => 'auth'], function () {
         Route::post('/create.user', [UserController::class, 'create']);
         Route::post('/login', [AuthController::class, 'login']);
         Route::post('/logout', [AuthController::class, 'logout']);
