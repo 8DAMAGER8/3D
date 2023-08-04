@@ -43,12 +43,8 @@ export default {
 
   mounted() {
     this.getUser()
-    this.getToken()
   },
   methods: {
-    getToken() {
-        console.log(localStorage.getItem('access_token'))
-    },
     getUser() {
       axios.get(
           BACKAND_URL + `/api/get.user`,
