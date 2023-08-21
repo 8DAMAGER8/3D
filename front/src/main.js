@@ -10,7 +10,7 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-export const BACKAND_URL = 'https://9060-87-117-53-132.ngrok-free.app'
+export const BACKAND_URL = 'https://b59d-31-23-164-5.ngrok-free.app'
 
 const app = createApp(App)
 app.use(router)

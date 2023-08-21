@@ -1,6 +1,6 @@
 <template>
   <h3 class="text-center mt-3">
-    Добавление чебурека
+    Регистрация пользователя
   </h3>
   <form class="w-50 table">
     <div class="mb-3 ">
@@ -29,7 +29,7 @@
 </style>
 <script>
 import axios from "axios";
-import {BACKAND_URL} from "../../main.js"
+import {BACKAND_URL} from "@/main"
 
 export default {
   data() {

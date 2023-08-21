@@ -16,8 +16,7 @@
             </RouterLink>
           </li>
           <li class="nav-item">
-            <RouterLink v-if="!accessToken" to="/registration" class="btn btn-outline-success me-2">Добавить
-              пользователя
+            <RouterLink v-if="!accessToken" to="/registration" class="btn btn-outline-success me-2">Регистрация
             </RouterLink>
           </li>
           <li class="nav-item">
@@ -32,7 +31,7 @@
             </RouterLink>
           </li>
           <li class="nav-item">
-             <a v-if="accessToken" @click.prevent="logout" class="btn btn-outline-success me-2">Выход</a>
+            <a v-if="accessToken" @click.prevent="logout" class="btn btn-outline-success me-2">Выход</a>
           </li>
         </ul>
         <span class="navbar-text">
